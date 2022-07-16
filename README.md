@@ -24,7 +24,7 @@ transactions. If the transaction id is not unique, the operation must fail.<br /
 • H2 Database<br />
 
 I have implemtented RestAPI to register the player, to create transactions (credit & debit) & to delete the player.
-Here for transactions, I have implemented two methods.<br />
+Here for transactions, I have implemented two methods. For player wallet, username field can not be null/blank. At the time of registering a player current balance field will be automatically stored as 0. For player transaction, transaction type & transaction balance can not be null/balance, transaction Id & transaction date will be automatically generated.<br />
 
 • to get list of the players<br />
 GET method: /playerwallet<br /><br />
@@ -56,9 +56,10 @@ DELETE method: /playerwallet/{player_id}<br /><br />
 GET method: /playerwallet/{player_id}/transactions/<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture14.PNG)<br />
 
-• to register a transaction (debit/credit) of a player<br />
+• to register a transaction (debit/credit) of a player. Transaction Id will generate automatically even though it is given.<br />
 POST method: /playerwallet/{player_id}/transactions/<br /><br />
-![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture24.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture23.PNG)<br />
 
 • if the transaction type is given other than credit/debit, it will show an error message<br />
 POST method: /playerwallet/{player_id}/transactions/<br /><br />
