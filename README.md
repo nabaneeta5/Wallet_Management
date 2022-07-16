@@ -107,3 +107,7 @@ I have kept the frontend of this project is very simple. HTML & Thymeleaf are us
 
 • list of transactions & current balance<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture8.PNG)
+
+# Final thoughts on my assignment to be production-ready
+
+I kept the front end very simple by using only HTML & Thymeleaf and have used the H2 database store. I think ReactJs can be used as a frontend and MySQL or MongoDB can be used as a database store  for production ready.
