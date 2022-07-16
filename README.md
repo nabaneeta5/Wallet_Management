@@ -34,13 +34,23 @@ GET method: /playerwallet<br /><br />
 GET method: /playerwallet/{player_id}<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture10.PNG)<br />
 
+• if an individual player is not exists, it will show an error message<br />
+GET method: /playerwallet/{player_id}<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture13.PNG)<br />
+
+• Kept the username unique, if same username is given to register the player, it will show an error message<br />
+POST method: /playerwallet/<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture11.PNG)<br />
+
 • to register a player<br />
 POST method: /playerwallet/<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture12.PNG)<br />
 
 • to delete a player<br />
 DELETE method: /playerwallet/{player_id}<br /><br />
-![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture20.PNG)<br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture20.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture21.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture22.PNG)
 
 • to get list of transactions of a player<br />
 GET method: /playerwallet/{player_id}/transactions/<br /><br />
@@ -50,6 +60,14 @@ GET method: /playerwallet/{player_id}/transactions/<br /><br />
 POST method: /playerwallet/{player_id}/transactions/<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
 
+• if the transaction type is given other than credit/debit, it will show an error message<br />
+POST method: /playerwallet/{player_id}/transactions/<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture15.PNG)<br />
+
+• for debit transaction, if the debit amount is greater than current balance, it will show an error message<br />
+POST method: /playerwallet/{player_id}/transactions/<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture16.PNG)<br />
+
 • to register a credit transaction of a player<br />
 POST method: /playerwallet/{player_id}/credittrans/{amount}<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture17.PNG)<br />
@@ -58,8 +76,14 @@ POST method: /playerwallet/{player_id}/credittrans/{amount}<br /><br />
 POST method: /playerwallet/{player_id}/debittrans/{amount}<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture19.PNG)<br />
 
+• for debit transaction, if the debit amount is greater than current balance, it will show an error message<br />
+POST method: /playerwallet/{player_id}/debittrans/{amount}<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture18.PNG)<br />
+
+
+
 # Frontend
-I have kept the frontend of this project is versy simple. HTML & Thymeleaf are used to create the frontend. Here how it's looks like: <br /><br />
+I have kept the frontend of this project is very simple. HTML & Thymeleaf are used only to create the frontend. Here how it's looks like: <br /><br />
 • Login / Register page (As I haven't used password for login, I have kept the Username field as unique)<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture.PNG)
 • Home page after login, where all the transactions and current balance will be shown. <br /><br />
