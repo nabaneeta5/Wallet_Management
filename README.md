@@ -15,7 +15,7 @@ transactions. If the transaction id is not unique, the operation must fail.<br /
 • Spring Boot Version: 2.7.1<br />
 • Apache Mavan Version: 3.8.6<br />
 
-# Dependencies I have used:
+# Dependencies used:
 • Lombok<br />
 • Spring Web<br />
 • Rest Repositories<br />
@@ -23,14 +23,14 @@ transactions. If the transaction id is not unique, the operation must fail.<br /
 • Spring Data JPA<br />
 • H2 Database<br />
 
-I have implemtented RestAPI to register the player, to create transactions (credit & debit), to delete the player.
+I have implemtented RestAPI to register the player, to create transactions (credit & debit) & to delete the player.
 Here for transactions, I have implemented two methods.<br />
 
 • to get list of the players<br />
 GET method: /playerwallet<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
 
-• to get details of one player<br />
+• to get details of individual player<br />
 GET method: /playerwallet/{player_id}<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture10.PNG)<br />
 
@@ -44,7 +44,7 @@ DELETE method: /playerwallet/{player_id}<br /><br />
 
 • to get list of transactions of a player<br />
 GET method: /playerwallet/{player_id}/transactions/<br /><br />
-![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture14.PNG)<br />
 
 • to register a transaction (debit/credit) of a player<br />
 POST method: /playerwallet/{player_id}/transactions/<br /><br />
@@ -52,8 +52,8 @@ POST method: /playerwallet/{player_id}/transactions/<br /><br />
 
 • to register a credit transaction of a player<br />
 POST method: /playerwallet/{player_id}/credittrans/{amount}<br /><br />
-![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture17.PNG)<br />
 
 • to register a debit transaction of a player<br />
 POST method: /playerwallet/{player_id}/debittrans/{amount}<br /><br />
-![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture9.PNG)<br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture19.PNG)<br />
