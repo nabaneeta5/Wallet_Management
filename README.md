@@ -57,3 +57,25 @@ POST method: /playerwallet/{player_id}/credittrans/{amount}<br /><br />
 • to register a debit transaction of a player<br />
 POST method: /playerwallet/{player_id}/debittrans/{amount}<br /><br />
 ![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture19.PNG)<br />
+
+# Frontend
+I have kept the frontend of this project is versy simple. HTML & Thymeleaf are used to create the frontend. Here how it's looks like: <br /><br />
+• Login / Register page (As I haven't used password for login, I have kept the Username field as unique)<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture.PNG)
+• Home page after login, where all the transactions and current balance will be shown. <br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture1.PNG)
+
+• if text input is given instead of number, it will show an error<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture2.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture3.PNG)
+
+• if transaction type is not selected, it will show an error message<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture4.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture5.PNG)
+
+• if debit transaction amount is greater than current balance, it will show an error message<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture6.PNG)
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture7.PNG)
+
+• list of transactions & current balance<br /><br />
+![alt text](https://github.com/nabaneeta5/Wallet_Management/blob/main/asset-img/Capture8.PNG)
