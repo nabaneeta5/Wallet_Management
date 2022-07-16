@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallet Management</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar-fixed">
+<nav>
+    <div class="nav-wrapper">
+        <a href="/home" class="brand-logo center">Wallet Management</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a th:href="@{/home}"><i class="material-icons">store</i></a></li>
+            <li><a th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+</div>
+<p style="padding-left: 5%; color: darkred; size: 20px" th:if="${err}" th:text="${err}"></p>
+
+<div class="row">
+    <div class="col s12 m12">
+        <h2 class="header">Transaction</h2>
+    </div>
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <form class="col s12 m12" th:action="@{/transaction}" method="post" th:object="${playerTransactionObject}" >
+                        <div class="row">
+                            <div class="input-field col m6 s12">
+                                <input id="amount" type="text" required autocomplete="off"
+                                       th:field="*{transactionBalance}"  name="amount" class="validate"/>
+                                <label for="amount">Transaction amount*</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col m2 s6" >
+                                <label>
+                                    <input name="mode" th:field="*{transactionType}" th:value="credit" type="radio" />
+                                    <span>Credit</span>
+                                </label>
+                            </div>
+                            <div class="input-field col m2 s6">
+                                <label>
+                                    <input  name="mode" th:field="*{transactionType}" th:value="debit" type="radio" />
+                                    <span>Debit</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div><br><br></div>
+
+                        <div class="row">
+                            <button id="menu"  class="btn waves-effect waves-light" type="submit">Submit
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</body>
+</html>

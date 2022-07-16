@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallet Management</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar-fixed">
+<nav>
+    <div class="nav-wrapper">
+        <a href="/home" class="brand-logo center">Wallet Management</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--            <li><a th:href="|@{/logout/${userName}}|">Logout</a></li>-->
+            <li><a th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+</div>
+<!--<div th:if="${session.containsKey('id')}" th:text="${session.id}"></div>-->
+<div class="row">
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Welcome Player</span>
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <h2 class="title" style="text-transform: uppercase; font-weight: 600;" th:text="${session.playerWalletObject.getUserName()}"></h2>
+                        <p>Current Balance: <h3 th:text="${session.playerWalletObject.getCurrentBalance()}" ></h3><span> SEK</span></p>
+                        <a th:href="@{/transaction}" class="btn-floating btn-large pulse secondary-content"><i class="material-icons">payment</i></a>
+                    </li>
+                </ul>
+                <ul class="collection">
+                      <li class="collection-item">
+                        <div th:if="${#lists.isEmpty(session.playerWalletObject.getPlayerTransactions())}">
+                            <span>No Transactions Found</span>
+                        </div>
+                        <div th:unless="${#lists.isEmpty(session.playerWalletObject.getPlayerTransactions())}">
+                            <table class="striped">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Transaction Date</th>
+                                    <th>Transaction Account</th>
+                                    <th>Transaction Id</th>
+                                    <th>Transaction Amount</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr th:each="transObj : ${session.playerWalletObject.getPlayerTransactions()}">
+                                    <td></td>
+                                    <td th:text="${transObj.getTransactionDate()}"></td>
+                                    <td th:text="${transObj.getTransactionType()}" style="text-transform: uppercase"></td>
+                                    <td th:text="${transObj.getTransactionId()}"></td>
+                                    <td><span th:text="${transObj.getTransactionBalance()}"></span> SEK</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
