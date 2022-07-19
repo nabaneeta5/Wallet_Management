@@ -11,7 +11,7 @@ transactions. If the transaction id is not unique, the operation must fail.<br /
 • Transaction history per player
 
 # Docker Image Link
-[https://hub.docker.com/r/naba6625/walletdemo](https://hub.docker.com/r/naba6625/walletdemo)
+[https://hub.docker.com/r/naba6625/walletapp](https://hub.docker.com/r/naba6625/walletapp)
 
 # Technologies used in this Spring Boot Microservice Project
 • Java Version: 8<br />
